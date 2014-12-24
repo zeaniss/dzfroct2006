@@ -45,6 +45,12 @@ namespace dzfroct2006
             Thread.CurrentThread.CurrentCulture = Thread.CurrentThread.CurrentUICulture;
             System.Web.HttpContext.Current.Session["lang"] = language;
 
+            //injection de la langue dans le cookie
+            HttpCookie languageCookie = new HttpCookie("languageCookie");
+            String langue = (String)language;
+            languageCookie["lang"] = langue.Substring(0, 2);
+            System.Web.HttpContext.Current.Response.Cookies.Add(languageCookie);
+
 
         }
     }

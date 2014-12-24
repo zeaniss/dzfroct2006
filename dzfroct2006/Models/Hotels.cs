@@ -41,6 +41,6 @@ namespace dzfroct2006.Models
         public List<HotelRooms> Rooms { get; set; }
 
         //HotelFeatures
-        public List<HotelImages> HotelImageList { get; set; }
+        public List<HotelImages> HotelImages { get; set; }
      }
 }
