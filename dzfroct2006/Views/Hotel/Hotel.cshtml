@@ -1,114 +1,153 @@
-﻿@model dzfroct2006.Models.Hotels
-
-@{
-    ViewBag.Title = "Hotel";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+﻿@{
+    Layout = "~/Views/Shared/_LayoutSearch.cshtml";
 }
 
-<h2>Hotel</h2>
+@model dzfroct2006.Models.Hotels
 
-<fieldset>
-    <legend>Hotels</legend>
+<div>
+    <ul class="list-inline">
+        <li><b>@Html.DisplayFor(model => model.Name)</b> : <span class="glyphicon glyphicon-home"></span>@Html.DisplayFor(model => model.Address)</li>
+        <br />
+        <li><span class="glyphicon glyphicon-phone-alt"></span>@Html.DisplayFor(model => model.PhoneNumber1) - <span class="glyphicon glyphicon-print"></span>@Html.DisplayFor(model => model.FaxNumber1)
+            <br />
+        </li>
+    </ul>
+    <hr class="thin">
+</div>
+<div class="conteneur-fluide">
+    <ul class="list-inline">
+        <button class="glyphicon glyphicon-chevron-left pull-left"></button>
+        <img class="img" src="~/Images/HotelsImages/HotelTest/hotelTest2.png" />
+        <button class="glyphicon glyphicon-chevron-right pull-right"></button>
+    </ul>
 
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.Name)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Name)
-    </div>
+</div>
+<div>
+    <hr class="thin">
+</div>
 
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.Description)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Description)
-    </div>
+<div class="dropdown">
 
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.PhoneNumber1)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.PhoneNumber1)
-    </div>
+    <ul class="nav nav-tabs">
+        <li class="active" ><a data-toggle="tab" href="#ongletDesc">@Resources.Labels.Description</a></li>
+        <li><a data-toggle="tab" href="#ongletSrvices">@Resources.Labels.Services</a></li>
+        <li><a data-toggle="tab" href="#ongletComent">@Resources.Labels.Comments</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="ongletDesc" class="tab-pane fade in active">
+            <p>@Html.DisplayFor(model => model.Description)…</p>
+            <div class="typeChambre">
+                <div class="">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr style="background-color:#80daeb; color:white">
+                                <th>@Resources.Labels.RoomType</th>
+                                <th>@Resources.Labels.NbrMax</th>
+                                <th>@Resources.Labels.Option</th>
+                                <th style="border:0">@Resources.Labels.Price</th>
+                                <th style="border:0"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="width:400px">Chambre double</td>
+                                <td>2</td>
+                                <td style="width:200px">
+                                    <table>
+                                        <tr>
+                                            <td>Wifi gratuit</td>
+                                        </tr>
+                                        <tr>
+                                            <td>petit deje</td>
+                                        </tr>
+                                    </table>
 
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.PhoneNumber2)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.PhoneNumber2)
-    </div>
+                                </td>
+                                <td class="width150" >5000DA</td>
+                                <td class="width250"><a href="#" class="btn btn-info btn-lg pull-right" style="width:100px;height:10px; text-align:center">Reservé<span class="glyphicon glyphicon-play"></span></a></td>
+                            </tr>
+                  
+                        </tbody>
+                    </table>
 
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.PhoneNumber3)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.PhoneNumber3)
-    </div>
+                </div>
 
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.FaxNumber1)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.FaxNumber1)
-    </div>
+            </div>
+        </div>
+        <div id="ongletSrvices" class="tab-pane fade">
+            <div class="divServices">
+                <div class="list-group">
+                    <a class="list-group-item">
+                        <table>
+                            <tr>
+                                <td class="width300 icone-cafe"><b>@Resources.Labels.Cafeteria</b></td>
+                                <td class="width300"><b>@Resources.Labels.InTheHotel :</b>oui</td>
+                                <td class="width300"><b>@Resources.Labels.outside :</b>à 100m</td>
+                            </tr>
+                        </table>
+                    </a>
+                </div>
+                <div class="list-group">
+                    <a class="list-group-item">
+                        <table>
+                            <tr>
+                                <td class="width300 icone-resto"><b>@Resources.Labels.Restaurant</b></td>
+                                <td class="width300"><b>@Resources.Labels.InTheHotel :</b>Non</td>
+                                <td class="width300"><b>@Resources.Labels.outside :</b>à 100m</td>
+                            </tr>
+                        </table>
+                    </a>
+                </div>
+                <div class="list-group">
+                    <a class="list-group-item">
+                        <table>
+                            <tr>
+                                <td class="width300 icone-wifi"><b>@Resources.Labels.InternetWifi</b> </td>
+                                <td class="width300"><b>@Resources.Labels.Room :</b> Non</td>
+                                <td class="width300"><b>@Resources.Labels.PublicSpace :</b> Oui</td>
+                            </tr>
+                        </table>
+                    </a>
+                </div>
+                <div class="list-group">
+                    <a class="list-group-item">
+                        <table>
+                            <tr>
+                                <td class="width300"><b>@Resources.Labels.Parking</b></td>
+                                <td class="width300"><b>@Resources.Labels.Private :</b>Non</td>
+                                <td class="width300"><b>@Resources.Labels.Public :</b> à 100m</td>
+                            </tr>
+                        </table>
+                    </a>
+                </div>
+                <div class="list-group">
+                    <a class="list-group-item">
+                        <table>
+                            <tr>
+                                <td class="width300"><b>@Resources.Labels.RoomFacilities</b></td>
+                                <td class="width300">
+                                    <ul>
+                                        <li>TV</li>
+                                        <li>Climatisation</li>
+                                        <li>Chauffage</li>
+                                    </ul>
+                                </td>
+                                <td class="width300">
+                                    <ul>
+                                        <li>Téléphone</li>
+                                        <li>Coffre-fort</li>
+                                        <li>Lit bébé sur demande</li>
+                                    </ul>
 
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.FaxNumber2)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.FaxNumber2)
-    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="ongletComent" class="tab-pane fade">
+            <p>................comm</p>
 
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.FaxNumber3)
+        </div>
     </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.FaxNumber3)
-    </div>
-
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.Email1)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Email1)
-    </div>
-
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.Email2)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Email2)
-    </div>
-
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.Address)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Address)
-    </div>
-
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.Town)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Town)
-    </div>
-
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.Wilaya)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Wilaya)
-    </div>
-
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.AddressDescription)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.AddressDescription)
-    </div>
-</fieldset>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id=Model.HotelID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

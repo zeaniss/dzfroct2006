@@ -14,7 +14,13 @@ namespace dzfroct2006.Controllers
 
         public ActionResult Hotel()
         {
-            var hotel = new Hotels() { Name = "TestHotel", Description = "Un simple hotel de test", FaxNumber1 = "0021321659878" };
+
+            ViewBag.dateDebut = new DateTime(2014, 12, 26).Date;
+            ViewBag.dateFin= new DateTime(2015, 12, 26).Date;
+            ViewBag.ville = "Oran";
+            var hotel = new Hotels() { Name = "TestHotel", Description = "Un simple hotel de test",PhoneNumber1 = "002130000001", FaxNumber1 = "0021321659878", Address = "01 rue des tests oran" };
+
+            var hotelImages = new HotelImages { IdImage = 11, Name = "hotelTest1", PathImage = "~/Images/HotelsImages/HotelTest/hotelTest2.png" };
             return View(hotel);
         }
 

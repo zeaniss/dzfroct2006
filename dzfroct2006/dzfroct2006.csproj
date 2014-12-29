@@ -267,6 +267,12 @@
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Images\Backgrounds\oran1.jpg" />
     <Content Include="Images\Backgrounds\setif1.jpg" />
+    <Content Include="Images\HotelsImages\HotelTest\hotelTest1.png" />
+    <Content Include="Images\HotelsImages\HotelTest\hotelTest2.png" />
+    <Content Include="Images\icones\cafe.png" />
+    <Content Include="Images\icones\parking.png" />
+    <Content Include="Images\icones\resto.png" />
+    <Content Include="Images\icones\wifi.png" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -321,10 +327,12 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Hotel\Hotel.cshtml" />
+    <Content Include="Views\Shared\_LayoutSearch.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="BLL\" />
+    <Folder Include="Images\App_LocalResources\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -357,7 +365,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>64290</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:61371/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

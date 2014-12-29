@@ -12,6 +12,8 @@ namespace dzfroct2006.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long IdImage { get; set; }
+        public String PathImage { get; set; }
+        public String Name { get; set; }
         //path
          //   name
           //  description
