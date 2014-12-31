@@ -1,0 +1,18 @@
+﻿.full {
+background: url(../Images/Backgrounds/setif1.jpg) no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+
+.title {
+
+    color:white;
+}
+
+
+.HotelStars {
+    text-align: right;
+    padding-top: 5%;
+}
