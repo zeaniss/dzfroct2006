@@ -18,9 +18,18 @@ namespace dzfroct2006.Controllers
             ViewBag.dateDebut = new DateTime(2014, 12, 26).Date;
             ViewBag.dateFin= new DateTime(2015, 12, 26).Date;
             ViewBag.ville = "Oran";
-            var hotel = new Hotels() { Name = "TestHotel", Description = "Un simple hotel de test",PhoneNumber1 = "002130000001", FaxNumber1 = "0021321659878", Address = "01 rue des tests oran" };
 
-            var hotelImages = new HotelImages { IdImage = 11, Name = "hotelTest1", PathImage = "~/Images/HotelsImages/HotelTest/hotelTest2.png" };
+
+            HotelImages hotelImages = new HotelImages { IdImage = 11, Name = "hotelTest1", PathImage = "~/Images/HotelsImages/HotelTest/hotelTest2.png" };
+
+            List<HotelImages> listHotelImages = new List<HotelImages>();
+            listHotelImages.Add(hotelImages);
+
+            HotelRooms room1 = new HotelRooms {RoomType="Double", Description="Chambre double Luxe", NbRooms=5, NbPersonnes=2  };
+            List<HotelRooms> listRoom = new List<HotelRooms>();
+            listRoom.Add(room1);
+            var hotel = new Hotels() { Name = "TestHotel", Description = "Un simple hotel de test", PhoneNumber1 = "002130000001", FaxNumber1 = "0021321659878", Address = "01 rue des tests oran", HotelImages = listHotelImages, Rooms=listRoom };
+
             return View(hotel);
         }
 

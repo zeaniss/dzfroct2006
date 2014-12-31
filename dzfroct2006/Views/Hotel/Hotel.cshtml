@@ -13,15 +13,20 @@
         </li>
     </ul>
     <hr class="thin">
-</div>
-<div class="conteneur-fluide">
-    <ul class="list-inline">
-        <button class="glyphicon glyphicon-chevron-left pull-left"></button>
-        <img class="img" src="~/Images/HotelsImages/HotelTest/hotelTest2.png" />
-        <button class="glyphicon glyphicon-chevron-right pull-right"></button>
+</div>  
+
+    <ul class="bxslider">
+        <li><img class="img" src="~/Images/HotelsImages/HotelTest/hotelTest2.png" /></li>
+        <li><img class="img" src="~/Images/HotelsImages/HotelTest/hotelTest1.png" /></li>
     </ul>
 
-</div>
+
+<script type="text/javascript">
+    $('.bxslider').bxSlider({
+        auto: true,
+        autoControls: true
+    });
+</script>
 <div>
     <hr class="thin">
 </div>
@@ -64,7 +69,10 @@
 
                                 </td>
                                 <td class="width150" >5000DA</td>
-                                <td class="width250"><a href="#" class="btn btn-info btn-lg pull-right" style="width:100px;height:10px; text-align:center">Reservé<span class="glyphicon glyphicon-play"></span></a></td>
+                                <td class="width250"><a href="#" class="btn btn-info btn-lg pull-right" 
+                                       style="width:100px;height:10px; text-align:center">Reservé<span class="glyphicon glyphicon-play"></span>
+                                     </a>
+                                </td>
                             </tr>
                   
                         </tbody>
