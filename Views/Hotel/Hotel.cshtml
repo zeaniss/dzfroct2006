@@ -1,0 +1,114 @@
+﻿@model dzfroct2006.Models.Hotels
+
+@{
+    ViewBag.Title = "Hotel";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Hotel</h2>
+
+<fieldset>
+    <legend>Hotels</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PhoneNumber1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PhoneNumber1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PhoneNumber2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PhoneNumber2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PhoneNumber3)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PhoneNumber3)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FaxNumber1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FaxNumber1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FaxNumber2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FaxNumber2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FaxNumber3)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FaxNumber3)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Email1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Email1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Email2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Email2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Address)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Address)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Town)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Town)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Wilaya)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Wilaya)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AddressDescription)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AddressDescription)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.HotelID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
